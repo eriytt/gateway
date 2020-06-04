@@ -17,6 +17,7 @@ wordmark =
 
 ## Menu Items
 
+actions-menu-item = Actions
 things-menu-item = Things
 rules-menu-item = Rules
 logs-menu-item = Logs

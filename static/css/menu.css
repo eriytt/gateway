@@ -49,6 +49,10 @@
   display: none;
 }
 
+#main-menu #actions-menu-item {
+  background-image: url('/images/things-icon.png');
+}
+
 #main-menu #things-menu-item {
   background-image: url('/images/things-icon.png');
 }

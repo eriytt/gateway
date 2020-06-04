@@ -14,6 +14,87 @@
     <link rel="apple-touch-icon" sizes="512x512" href="/images/icon-2x.png">
   </head>
   <body class="hidden">
+
+    <!-- Actions View -->
+    <section data-view="actions" id="actions-view" class="hidden">
+      <div class="title-bar">
+        <h3 class="actions-header" data-l10n-id="actions"></h3>
+      </div>
+      <div id="actions">
+        <div id="create-action-hint" class="hidden" data-l10n-id="actions-create-action-hint">
+        </div>
+      </div>
+      <button id="create-action-button" class="icon-button" data-l10n-id="add-action"></button>
+    </section>
+
+    <section data-view="action" id="action-view" class="hidden">
+      <div class="title-bar">
+        <a href="/actions" class="back-button icon-button" data-l10n-id="back-button"></a>
+        <div class="action-info">
+          <h1>
+            <span class="action-name" data-l10n-id="actions-action-name"></span>
+            <img src="/images/customize-16.svg"
+                 data-l10n-id="actions-customize-action-name-icon"
+                 class="action-name-customize"/>
+          </h1>
+          <p data-l10n-id="actions-action-description"></p>
+        </div>
+        <button class="action-preview-button icon-button" data-l10n-id="actions-preview-button"></button>
+        <button id="delete-button">
+          <img src="/images/delete-16.svg" data-l10n-id="actions-delete-icon" width="40" height="40"/>
+        </button>
+      </div>
+      <div id="action-area">
+        <div id="onboarding-hint">
+         <div class="drag-hint">
+            <div class="drag-hint-container">
+              <h2 data-l10n-id="actions-drag-hint"></h2>
+            </div>
+          </div>
+        </div>
+        <div id="drag-hint">
+          <div class="drag-hint-trigger drag-hint">
+            <div class="drag-hint-container">
+              <p data-l10n-id="actions-drag-input-hint"></p>
+              <div class="drag-hint-block">+</div>
+            </div>
+          </div>
+          <div class="drag-hint-effect drag-hint">
+            <div class="drag-hint-container">
+              <p data-l10n-id="actions-drag-output-hint"></p>
+              <div class="drag-hint-block">+</div>
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" id="connection">
+        </svg>
+      </div>
+      <div id="action-parts-list-container">
+        <button id="action-parts-list-scroll-left">
+          <img class="scroll-icon" data-l10n-id="actions-scroll-left" src="/images/arrowhead-left-16.svg"/>
+        </button>
+        <button id="action-parts-list-scroll-right">
+          <img class="scroll-icon" data-l10n-id="actions-scroll-right" src="/images/arrowhead-right-16.svg"/>
+        </button>
+        <div id="delete-area">
+          <div class="delete-container">
+            <h2 class="delete-prompt" data-l10n-id="actions-delete-prompt"></h2>
+          </div>
+        </div>
+        <div id="action-parts-list"></div>
+      </div>
+      <div id="action-delete-overlay">
+        <div class="action-delete-dialog">
+          <p data-l10n-id="actions-delete-dialog"></p>
+          <input class="action-delete-cancel-button" type="button"
+                 value="Cancel" data-l10n-id="actions-delete-cancel"/>
+          <input class="action-delete-confirm-button" type="button"
+                 value="Remove Action" data-l10n-id="actions-delete-confirm"/>
+        </div>
+      </div>
+    </section>
+
     <!-- Things View -->
     <section data-view="things" class="selected" id="things-view">
       <div id="thing-title" class="hidden">
@@ -574,7 +655,8 @@
     <nav id="main-menu" class="hidden">
       <img id="menu-wordmark" data-l10n-id="wordmark" src="/images/wordmark.svg" />
       <ul>
-        <li><a id="things-menu-item" data-l10n-id="things-menu-item" href="/things" class="selected"></a></li>
+        <li><a id="actions-menu-item" data-l10n-id="actions-menu-item" href="/actions"></a></li>
+        <li><a id="things-menu-item" data-l10n-id="things-menu-item"  class="selected" href="/things"></a></li>
         <li><a id="rules-menu-item" data-l10n-id="rules-menu-item" href="/rules"></a></li>
         <li><a id="logs-menu-item" data-l10n-id="logs-menu-item" href="/logs"></a></li>
         <li><a id="floorplan-menu-item" data-l10n-id="floorplan-menu-item" href="/floorplan"></a></li>

@@ -14,6 +14,8 @@ let API;
 // eslint-disable-next-line prefer-const
 let GatewayModel;
 // eslint-disable-next-line prefer-const
+let ActionsScreen;
+// eslint-disable-next-line prefer-const
 let ThingsScreen;
 // eslint-disable-next-line prefer-const
 let AddThingScreen;
@@ -106,9 +108,12 @@ const App = {
     RulesScreen.init();
     RuleScreen.init();
 
+    ActionsScreen.init();
+
     LogsScreen.init();
 
     this.views = [];
+    this.views.actions = document.getElementById('actions-view');
     this.views.things = document.getElementById('things-view');
     this.views.floorplan = document.getElementById('floorplan-view');
     this.views.settings = document.getElementById('settings-view');
@@ -214,6 +219,12 @@ const App = {
       this.pingerInterval =
         setInterval(this.startPinger.bind(this), this.PING_INTERVAL);
     }
+  },
+
+  showActions: function() {
+    this.hideExtensionBackButton();
+    ActionsScreen.show();
+    this.selectView('actions');
   },
 
   showThings: function(context) {
@@ -475,6 +486,7 @@ module.exports = App;
 // avoid circular dependency
 API = require('./api');
 GatewayModel = require('./models/gateway-model');
+ActionsScreen = require('./views/actions-screen');
 ThingsScreen = require('./views/things');
 AddThingScreen = require('./views/add-thing');
 Menu = require('./views/menu');
