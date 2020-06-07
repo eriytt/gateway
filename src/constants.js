@@ -12,6 +12,7 @@ const path = require('path');
 
 // Web server routes
 exports.USERS_PATH = '/users';
+exports.MACTIONS_PATH = '/mactions';
 exports.THINGS_PATH = '/things';
 exports.PROPERTIES_PATH = '/properties';
 exports.NEW_THINGS_PATH = '/new_things';

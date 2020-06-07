@@ -163,6 +163,9 @@ const Router = {
             require('./controllers/logs_controller'));
     app.use(API_PREFIX + Constants.NOTIFIERS_PATH, nocache, auth,
             require('./controllers/notifiers_controller'));
+    app.use(API_PREFIX + Constants.MACTIONS_PATH, nocache, auth,
+            require('./controllers/mactions_controller'));
+
 
     app.use(API_PREFIX + Constants.OAUTH_PATH, nocache,
             require('./controllers/oauth_controller').default);

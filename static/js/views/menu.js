@@ -22,7 +22,7 @@ const Menu = {
     this.element.addEventListener('click', this.handleClick.bind(this));
     this.scrim.addEventListener('click', this.handleScrimClick.bind(this));
     this.items = {};
-    this.items.actions = [document.getElementById('actions-menu-item')];
+    this.items.mactions = [document.getElementById('mactions-menu-item')];
     this.items.things = [document.getElementById('things-menu-item')];
     this.items.settings = [document.getElementById('settings-menu-item')];
     this.items.floorplan = [document.getElementById('floorplan-menu-item')];

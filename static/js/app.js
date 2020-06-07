@@ -113,7 +113,7 @@ const App = {
     LogsScreen.init();
 
     this.views = [];
-    this.views.actions = document.getElementById('actions-view');
+    this.views.mactions = document.getElementById('mactions-view');
     this.views.things = document.getElementById('things-view');
     this.views.floorplan = document.getElementById('floorplan-view');
     this.views.settings = document.getElementById('settings-view');
@@ -221,10 +221,10 @@ const App = {
     }
   },
 
-  showActions: function() {
+  showManualActions: function() {
     this.hideExtensionBackButton();
     ActionsScreen.show();
-    this.selectView('actions');
+    this.selectView('mactions');
   },
 
   showThings: function(context) {

@@ -422,6 +422,26 @@ const API = {
     return this.delete(actionUrl);
   },
 
+  getManualActions() {
+    return this.getJson('/mactions');
+  },
+
+  getManualAction(actionId) {
+    return this.getJson(`/mactions/${encodeURIComponent(actionId)}`);
+  },
+
+  addManualAction(description) {
+    return this.postJson('/mactions', description);
+  },
+
+  updateManualAction(actionId, description) {
+    return this.putJson(`/mactions/${encodeURIComponent(actionId)}`, description);
+  },
+
+  deleteManualAction(actionId) {
+    return this.delete(`/mactions/${encodeURIComponent(actionId)}`);
+  },
+
   getRules() {
     return this.getJson('/rules');
   },
